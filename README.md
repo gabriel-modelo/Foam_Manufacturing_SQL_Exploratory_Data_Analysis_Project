@@ -68,8 +68,6 @@ machines ───────── maintenance
 
 The SQL scripts are organized by analytical stage:
 
-### `sql/01_data_exploration.sql`
-
 ### `sql/02_Dimension-Exploration.sql`
 
 Exploration of the dimensions of the tables of the dataset:
@@ -120,6 +118,11 @@ Business-oriented production quality analysis
   - Process conditions analysis (ambient temperature and humidity)
   - Cycle time analysis
 
+## Power BI Dashboard
+
+## Key Analytical Principle
+
+The project calculates overall defect rate using aggregated quantities
 
 
 

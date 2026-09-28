@@ -110,6 +110,10 @@ Business-oriented production quality analysis
 - Overall Yield and Overall Defect Rate
 - Monthly yield and defect rate
 - Monthly defect rate + 3-month rolling average
+- Product performance
+- Machine performance
+- Shift performance
+- Operator performance
 - Deep-dive into months with non-compliant yield and defect rate
   - Pareto analysis using window functions
   - Maintenance age analysis

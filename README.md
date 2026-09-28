@@ -54,15 +54,70 @@ Core relationships:
 products ───────┐
                 │
                 ▼
-production ──────── inspection ──────── defects
+    ─────── production ──────── inspection ──────── defects
+    │           │
+    │           ├──────── machines
+    │           ├──────── operators
+    │           │
+    │           └──────── calendar
     │
-    ├──────── machines
-    ├──────── operators
-    │
-    └──────── calendar
-
 machines ───────── maintenance
 ```
 
 ## SQL Analysis
+
+The SQL scripts are organized by analytical stage:
+
+### `sql/01_data_exploration.sql`
+
+### `sql/02_Dimension-Exploration.sql`
+
+Exploration of the dimensions of the tables of the dataset:
+
+- Products and product categories
+- Machine type, line names, and machine names
+- Defect severity and defect types
+- Dispositions
+- Maintenance types
+- Production shifts and process status
+- Operator names
+
+### `sql/03_Date-Range-Exploration.sql`
+
+Checking the date boundaries and working shifts of the manufacturing plant
+
+- Production date range
+- Work week arrangement
+- Number of shifts per day
+
+### `sql/04_Measures-Exploration.sql`
+
+Quick insights exploration through key performance metrics
+
+- Total production quantity
+- Total defect quantity
+- Total production orders
+- Average production quantity
+- Average cycle time
+- Overall yield
+- Overall defect rate
+- Cost of quality
+
+### `sql/05_Operations-Insights-and-Analysis.sql`
+
+Business-oriented production quality analysis
+
+- Overall Yield and Overall Defect Rate
+- Monthly yield and defect rate
+- Monthly defect rate + 3-month rolling average
+- Deep-dive into months with non-compliant yield and defect rate
+  - Pareto analysis using window functions
+  - Maintenance age analysis
+  - Process conditions analysis (ambient temperature and humidity)
+  - Cycle time analysis
+
+
+
+
+
 

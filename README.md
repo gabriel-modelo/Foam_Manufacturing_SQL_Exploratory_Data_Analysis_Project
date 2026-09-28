@@ -46,5 +46,23 @@ The project contains eight tables:
 | `maintenance` | Machine maintenance events and downtime |
 | `calendar` | Date dimension for time-based analysis |
 
+## Database Structure
 
+Core relationships:
+
+```text
+products ───────┐
+                │
+                ▼
+production ──────── inspection ──────── defects
+    │
+    ├──────── machines
+    ├──────── operators
+    │
+    └──────── calendar
+
+machines ───────── maintenance
+```
+
+## SQL Analysis
 

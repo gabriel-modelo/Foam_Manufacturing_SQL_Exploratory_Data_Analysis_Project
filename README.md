@@ -31,7 +31,20 @@ The manufacturing plant needs to understand where quality losses occur and which
 - **Power BI** — interactive dashboarding
 - **GitHub** — portfolio documentation and version control
 
+## Dataset
 
+The project contains eight tables:
+
+| Table | Purpose |
+|---|---|
+| `products` | Product specifications and standard cycle times |
+| `machines` | Machine, line, and machine-type information |
+| `operators` | Operator reference data |
+| `production` | Production batch and process data |
+| `inspection` | Inspection quantities, defects, and pass quantities |
+| `defects` | Individual defect records, severity, disposition, and cost |
+| `maintenance` | Machine maintenance events and downtime |
+| `calendar` | Date dimension for time-based analysis |
 
 
 

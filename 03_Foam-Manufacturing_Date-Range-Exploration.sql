@@ -20,7 +20,6 @@ SELECT
 	MIN(production_date) AS date_from,
     MAX(production_date) AS date_to
 FROM production;
--- Production range is the whole year 2025.
 
 
 -- Determine the production's work week arrangement.
@@ -35,7 +34,6 @@ AS generated_date) AS generated_dates
 ON generated_date = production_date
 GROUP BY generated_date, production_date
 ORDER BY generated_date;
--- Production work week arrangement is 7 days/week for the whole year.
 
 
 -- Determine the production shifts per day.
@@ -46,5 +44,4 @@ SELECT
 FROM production
 GROUP BY production_date, shift
 ORDER BY production_date ASC;
--- There are three (3) shifts per day - Day, Night, Swing.
 

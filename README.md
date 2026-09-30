@@ -113,6 +113,7 @@ Business-oriented production quality analysis
   - Pareto analysis on defects using window functions
 - Maintenance age analysis
 - Process conditions analysis (ambient temperature and humidity)
+  - Box plot analysis 
 - Cycle time analysis
 
 ## Key Analytical Principle

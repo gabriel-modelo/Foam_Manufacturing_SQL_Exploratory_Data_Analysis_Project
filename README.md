@@ -124,6 +124,11 @@ Business-oriented production quality analysis
 
 The project calculates overall defect rate using aggregated quantities
 
+```sql
+SUM(defect_qty) / SUM(inspected_qty)
+```
+
+
 
 
 

@@ -111,13 +111,13 @@ Business-oriented production quality analysis
 - Operator performance
 - Deep-dive into months with non-compliant yield and defect rate
   - Pareto analysis on defects using window functions
-  - Maintenance age analysis
-  - Process conditions analysis (ambient temperature and humidity)
-  - Cycle time analysis
+- Maintenance age analysis
+- Process conditions analysis (ambient temperature and humidity)
+- Cycle time analysis
 
 ## Key Analytical Principle
 
-The project calculates yield (%) and defect rate (DPPM) using aggregated defect quantities and production quantities rather than averaging the yield and defect rates of row-level production batches.
+The project calculates yield (%) and defect rate (DPPM) using aggregated defect quantities and production quantities rather than aggregating the yield and defect rates of row-level production batches. This prevents treating the data being clustered per batch with different volumes, but counts the data as individual units regardless of the quantity per production batch.
 
 ```sql
 SUM(passed_qty) / SUM(production_qty) * 100 AS overall_yield
@@ -128,6 +128,10 @@ SUM(defect_qty) / SUM(production_qty) * 1000000 AS overall_defect_rate
 ## Limitations
 
 The dataset used in the project is synthetic. The relationships uncovered in the dataset should not be interpreted as legitimate causations. Such relationships in real-world manufacturing systems require operational validation before business decisions are made.
+
+## Project Takeaways
+
+The project demonstrates an exploratory data analysis workflow combining domain knowledge in manufacturing and quality with SQL querying to gain quick insights about the operations of the foam manufacturing plant. It emphasizes not only the use of SQL code, but more on answering deep manufacturing questions and communicating the evidences clearly.
 
 
 

@@ -127,12 +127,14 @@ Business-oriented production quality analysis
 The project calculates yield (%) and defect rate (DPPM) using aggregated defect quantities and production quantities rather than averaging the yield and defect rates of row-level production batches.
 
 ```sql
-SUM(defect_qty) / SUM(production_qty)
+SUM(passed_qty) / SUM(production_qty) * 100 AS overall_yield
 
-SUM(passed_qty) / SUM(production_qty)
+SUM(defect_qty) / SUM(production_qty) * 1000000 AS overall_defect_rate
 ```
 
+## Limitations
 
+The dataset used in the project is synthetic. The relationships uncovered in the dataset should not be interpreted as legitimate causations. Such relationships in real-world manufacturing systems require operational validation before business decisions are made.
 
 
 

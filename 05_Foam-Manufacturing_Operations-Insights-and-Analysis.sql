@@ -125,6 +125,7 @@ JOIN products AS pr
 GROUP BY pr.product_name
 ORDER BY ranking;
 
+
 -- Question 3: For the failing months, list the breakdown of the defects. Which defects must be addressed first?
 
 -- Create temporary table to store inspection data from February and March 2025:
@@ -226,7 +227,7 @@ ORDER BY total_dppm DESC
 LIMIT 1;
 -- Rebond Press 03
 
--- Question 4.2: Show the defect rate per machine ranked from highest to lowest DPPM.
+-- Question 4.2: Show the defect rate per defect type for each machine ranked from highest to lowest DPPM.
 SELECT
 	machine_name, 
 	defect_type, 
@@ -236,7 +237,7 @@ SELECT
 FROM insp_defects_feb_march
 GROUP BY machine_name, defect_type
 ORDER BY machine_name, dppm_rank ASC;
--- The machines generate different defects in different rates.
+
 
 -- Question 5: Which shift produces the most defective products?
 SELECT
@@ -328,7 +329,7 @@ Process Conditions Analysis
 -- Question 10: Did environmental conditions affect the generation of defects?
 
 -- Factor of Humidity
--- Exploring humidity distribution
+-- Exploring humidity distribution through box plot analysis
 SELECT 
 	MIN(humidity_pct) AS min_hum, 
 	PERCENTILE_CONT(0.25) WITHIN GROUP(ORDER BY humidity_pct) AS first_quartile,
@@ -406,7 +407,7 @@ Cycle Time Analysis
 =====================================================================================================================
 */
 
--- Question 11: Did environmental conditions affect the generation of defects?
+-- Question 11: Is there a relationship between product cycle time to the generation of defects?
 WITH cycle_time_per_batch AS (
 SELECT
     p.production_id,

@@ -3,13 +3,13 @@
 ## Project Overview
 This project analyzes a fictional foam manufacturing dataset to discover insights, trends, and patterns to understand key metrics using PostgreSQL and Power BI.
 
-The project follows an end-to-end workflow starting from obtaining the raw dataset, performing exploratory data analysis (EDA) with PosgreSQL, visualizing with Power BI, and finally gaining business insights.
+The project follows an end-to-end workflow starting from obtaining the raw dataset, performing exploratory data analysis (EDA) with PostgreSQL, visualizing with Power BI, and finally gaining business insights.
 
-*Note that the dataset used is fictional and obtained for the purpose of building the portfolio project. 
+Note that the dataset used is fictional and obtained for the purpose of building the portfolio project. 
 
 ## Business Problem
 
-The manufacturing plant needs to understand where quality losses occur and which processes deserve further investigation. This project aims to look into the production data and quality inspection data to isolate potential defect sources and recommend actionable quality insights.
+The manufacturing plant needs to understand where quality losses occur and which processes are in need of further investigation and optimization. This project aims to look into the production data and quality inspection data to isolate potential defect sources and recommend actionable quality insights.
 
 ## Objectives
 
@@ -113,7 +113,7 @@ Business-oriented production quality analysis
 - Shift performance
 - Operator performance
 - Deep-dive into months with non-compliant yield and defect rate
-  - Pareto analysis using window functions
+  - Pareto analysis on defects using window functions
   - Maintenance age analysis
   - Process conditions analysis (ambient temperature and humidity)
   - Cycle time analysis

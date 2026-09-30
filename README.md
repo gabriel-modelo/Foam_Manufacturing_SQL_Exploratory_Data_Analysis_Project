@@ -1,4 +1,4 @@
-# Foam_Manufacturing_Quality_Analysis
+# Foam Manufacturing Quality Analysis
 
 ## Project Overview
 This project analyzes a fictional foam manufacturing dataset to discover insights, trends, and patterns to understand key metrics using PostgreSQL.

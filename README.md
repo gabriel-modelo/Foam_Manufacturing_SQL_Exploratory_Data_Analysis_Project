@@ -120,12 +120,16 @@ Business-oriented production quality analysis
 
 ## Power BI Dashboard
 
+--------------------------------------------------------------
+
 ## Key Analytical Principle
 
-The project calculates overall defect rate using aggregated quantities
+The project calculates yield (%) and defect rate (DPPM) using aggregated defect quantities and production quantities rather than averaging the yield and defect rates of row-level production batches.
 
 ```sql
-SUM(defect_qty) / SUM(inspected_qty)
+SUM(defect_qty) / SUM(production_qty)
+
+SUM(passed_qty) / SUM(production_qty)
 ```
 
 

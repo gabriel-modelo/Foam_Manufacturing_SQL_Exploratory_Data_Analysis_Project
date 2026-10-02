@@ -65,7 +65,7 @@ machines ------- maintenance
 
 The SQL scripts are organized by analytical stage:
 
-### `sql/02_Dimension-Exploration.sql`
+### `sql/01_Dimension-Exploration.sql`
 
 Exploration of the dimensions of the tables of the dataset:
 
@@ -77,7 +77,7 @@ Exploration of the dimensions of the tables of the dataset:
 - Production shifts and process status
 - Operator names
 
-### `sql/03_Date-Range-Exploration.sql`
+### `sql/02_Date-Range-Exploration.sql`
 
 Checking the date boundaries and working shifts of the manufacturing plant
 
@@ -85,7 +85,7 @@ Checking the date boundaries and working shifts of the manufacturing plant
 - Work week arrangement
 - Number of shifts per day
 
-### `sql/04_Measures-Exploration.sql`
+### `sql/03_Measures-Exploration.sql`
 
 Quick insights exploration through key performance metrics
 
@@ -98,7 +98,7 @@ Quick insights exploration through key performance metrics
 - Overall defect rate
 - Cost of quality
 
-### `sql/05_Operations-Insights-and-Analysis.sql`
+### `sql/04_Operations-Insights-and-Analysis.sql`
 
 Business-oriented production quality analysis
 

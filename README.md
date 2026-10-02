@@ -118,7 +118,7 @@ Business-oriented production quality analysis
 
 ## Key Analytical Principle
 
-The project calculates yield (%) and defect rate (DPPM) using aggregated defect quantities and production quantities rather than aggregating the yield and defect rates of row-level production batches. This prevents treating the data being clustered per batch with different volumes, but counts the data as individual units regardless of the quantity per production batch.
+The project calculates yield (%) and defect rate (DPPM) using aggregated defect quantities and production quantities rather than aggregating the yield and defect rates of row-level production batches. This allows accounting the data in terms of individual units instead of per individual batch.
 
 ```sql
 SUM(passed_qty) / SUM(production_qty) * 100 AS overall_yield

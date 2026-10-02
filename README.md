@@ -48,17 +48,17 @@ The project contains eight tables:
 Core relationships:
 
 ```text
-products ───────┐
-                │
+products --------
+                |
                 ▼
-    ─────── production ──────── inspection ──────── defects
-    │           │
-    │           ├──────── machines
-    │           ├──────── operators
-    │           │
-    │           └──────── calendar
+    ------- production ------- inspection ------- defects
+    │           |
+    │           |-------- machines
+    │           |-------- operators
+    │           |
+    │           --------- calendar
     │
-machines ───────── maintenance
+machines ------- maintenance
 ```
 
 ## SQL Analysis

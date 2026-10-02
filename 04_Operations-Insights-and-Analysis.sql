@@ -3,7 +3,7 @@
 =====================================================================================================================
 
 Foam Manufacturing Quality & Defect Analysis
-	PART 5: OPERATIONS INSIGHTS AND ANALYSIS
+PART 4: OPERATIONS INSIGHTS AND ANALYSIS
 
 =====================================================================================================================
 Purpose:
